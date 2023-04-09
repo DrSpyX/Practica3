@@ -132,7 +132,7 @@ int main()
     int cantGrupos = tamCadena/seed;                            //cantidad de grupos de bits
 
     if(metodo==1){
-        int temp = contCerosUnos(cadenaBinaria, seed);              //contiene mayor cantidad de numeros, 0=iguales, 1+cantidad 0, 2+cantidad 1
+        int temp = 0;              //contiene mayor cantidad de numeros, 0=iguales, 1+cantidad 0, 2+cantidad 1
 
         invertBits(cadenaBinaria, seed, 1);                         //invierte el primer grupo de bits
 
