@@ -151,7 +151,7 @@ int main()
     }
 
     if(metodo==2){
-        for(int i=0;i<=cantGrupos-1;i++){                  //itera todos los grupos para desplazarlos a la derecha con la funcion 'desBits'
+        for(int i=0;i<=cantGrupos-1;i++){                  //itera todos los grupos para desplazarlos a la izquierda con la funcion 'desBits'
             desBits(&cadenaBinaria[i*seed],seed);
         }
         if(tamCadena%seed!=0 && tamCadena%seed!=1){        //en el caso de una cadena que no se pueda dividir en grupos de bits exactos se hace un grupo con los bits sobrantes y se desplazan

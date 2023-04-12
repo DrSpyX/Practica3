@@ -138,7 +138,7 @@ int main()
         cadenaBinaria += bits.to_string();
     }
 
-    int tamCadena = sizeof(cadenaBinaria)-1;                      //tamaño del arreglo que contiene los bits
+    int tamCadena = cadenaBinaria.size();                      //tamaño del arreglo que contiene los bits
     int cantGrupos = tamCadena/seed;                            //cantidad de grupos de bits
 
     if(metodo==1){

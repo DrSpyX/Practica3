@@ -4,8 +4,6 @@
 #include <bitset>
 #include <string>
 
-const int numBits = 8;
-
 using namespace std;
 
 string invertBits(string cdn, int max, int salto) {           //invierte los bits(cadena de bits, tamaño grupos, cada cuantos bits es invierte)
@@ -57,7 +55,7 @@ int contCerosUnos(string cdn, int max){                       //cuenta la cantid
     return cont;
 }
 
-string desBits(string cdn, int max){             //desplaza un bit a la derecha en un grupo de bits (cadena de bits,tamaño grupos)
+string desBits(string cdn, int max){             //desplaza un bit a la izquierda en un grupo de bits (cadena de bits,tamaño grupos)
     char p = cdn[0];
     if(max==2){                              //si el grupo es de dos bits se intercambian
         if(cdn[1]=='0'){
@@ -131,7 +129,7 @@ int main()
         cout<<"Error no definido"<<endl;
     }
 
-    int tamCadena = sizeof(cadenaBinaria)-1;                      //tamaño del arreglo que contiene los bits
+    int tamCadena = cadenaBinaria.size();                      //tamaño del arreglo que contiene los bits
     int cantGrupos = tamCadena/seed;                            //cantidad de grupos de bits
 
     if(metodo==1){
@@ -159,7 +157,7 @@ int main()
     if(metodo==2){
         string tempCad;
 
-        for(int i=0;i<=cantGrupos-1;i++){                  //itera todos los grupos para desplazarlos a la derecha con la funcion 'desBits'
+        for(int i=0;i<=cantGrupos-1;i++){                  //itera todos los grupos para desplazarlos a la izquierda con la funcion 'desBits'
             tempCad = desBits(cadenaBinaria.substr(i*seed,seed),seed);
             cadenaBinaria.replace(i*seed,seed,tempCad);
         }
